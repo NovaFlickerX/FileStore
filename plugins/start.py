@@ -31,7 +31,7 @@ BAN_SUPPORT = f"{BAN_SUPPORT}"
 @Bot.on_message(filters.command('start') & filters.private)
 async def start_command(client: Client, message: Message):
     await client.send_chat_action(message.chat.id, ChatAction.PLAYING) 
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     user_id = message.from_user.id
 
     # Add user if not already present
@@ -167,7 +167,7 @@ chat_data_cache = {}
 
 async def not_joined(client: Client, message: Message):
     await client.send_chat_action(message.chat.id, ChatAction.PLAYING) 
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
 
     user_id = message.from_user.id
     buttons = []
@@ -231,7 +231,7 @@ async def not_joined(client: Client, message: Message):
         except IndexError:
             pass
         await client.send_chat_action(message.chat.id, ChatAction.PLAYING) 
-        await asyncio.sleep(2)
+        await asyncio.sleep(1)
         await message.reply_photo(
             photo=get_random_pic(),
             caption=FORCE_MSG.format(
