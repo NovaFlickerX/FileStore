@@ -141,7 +141,7 @@ async def start_command(client: Client, message: Message):
             ]
         )
         await message.reply_photo(
-            photo=get_random_pic,
+            photo=get_random_pic(),
             caption=START_MSG.format(
                 first=message.from_user.first_name,
                 last=message.from_user.last_name,
@@ -233,7 +233,7 @@ async def not_joined(client: Client, message: Message):
         await client.send_chat_action(message.chat.id, ChatAction.PLAYING) 
         await asyncio.sleep(2)
         await message.reply_photo(
-            photo=get_random_pic,
+            photo=get_random_pic(),
             caption=FORCE_MSG.format(
                 first=message.from_user.first_name,
                 last=message.from_user.last_name,
