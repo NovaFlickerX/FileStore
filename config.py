@@ -44,7 +44,21 @@ def get_random_pic():
 
 #--------------------------------------------
 HELP_TXT = "<b><blockquote>HELP SECTION\n\n/report <write message> - send report to owner</blockquote></b>"
-ABOUT_TXT = "<b><blockquote>About us</blockquote></b>\n\nOwner: <a href='https://t.me/OnlyNoco'>OnlyNoco</a>\nPortfolio: <a href='href='https://onlynoco.vercel.app'></a>\n\n <blockquote>Channels,</blockquote>\n<blockquote><a href='https://t.me/HeavenlySubs'>BTTH</a>\n<a href='https://t.me/+O7PeEMZOAoMzYzVl'>Hentai</a></blockquote>"
+ABOUT_TXT = (
+    "<b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ sᴘᴀᴄᴇ</b>\n"
+    "──────────────────────\n"
+    "<b>ᴏᴡɴᴇʀ:</b> <a href='https://t.me/OnlyNoco'>OnlyNoco</a>\n"
+    "<b>ᴡᴇʙsɪᴛᴇ:</b> <a href='https://onlynoco.vercel.app'>Website</a>\n\n"
+    "<b>ᴄʜᴀɴɴᴇʟs</b>\n"
+    "──────────────────────\n"
+    "• <a href='https://t.me/HeavenlySubs'>ʙᴛᴛʜ</a>\n"
+    "• <a href='https://t.me/+O7PeEMZOAoMzYzVl'>ʜᴇɴᴛᴀɪ</a>\n"
+    "• <a href='https://t.me/YourChannel1'>ᴏɴɢᴏɪɴɢ ᴀɴɪᴍᴇ</a>\n"
+    "• <a href='https://t.me/YourChannel2'>ғɪɴɪsʜᴇᴅ ᴀɴɪᴍᴇ</a>\n"
+    "• <a href='https://t.me/YourChannel3'>ᴀɴɪᴍᴇ ɴᴇᴡs</a>\n"
+    "──────────────────────\n"
+    "<i>ᴀʟʟ ɪɴ ᴏɴᴇ ᴘʟᴀᴄᴇ.</i>"
+)
 #--------------------------------------------
 #--------------------------------------------
 START_MSG = os.environ.get("START_MESSAGE", "<b>ʜᴇʟʟᴏ {mention}\n\n<blockquote> ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</blockquote></b>")
