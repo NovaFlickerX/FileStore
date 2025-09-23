@@ -53,9 +53,9 @@ ABOUT_TXT = (
     "──────────────────────\n"
     "• <a href='https://t.me/HeavenlySubs'>ʙᴛᴛʜ</a>\n"
     "• <a href='https://t.me/+O7PeEMZOAoMzYzVl'>ʜᴇɴᴛᴀɪ</a>\n"
-    "• <a href='https://t.me/YourChannel1'>ᴏɴɢᴏɪɴɢ ᴀɴɪᴍᴇ</a>\n"
-    "• <a href='https://t.me/YourChannel2'>ғɪɴɪsʜᴇᴅ ᴀɴɪᴍᴇ</a>\n"
-    "• <a href='https://t.me/YourChannel3'>ᴀɴɪᴍᴇ ɴᴇᴡs</a>\n"
+    "• <a href='https://t.me/OngoingAnimeCrisp'>ᴏɴɢᴏɪɴɢ ᴀɴɪᴍᴇ</a>\n"
+    "• <a href='https://t.me/CrispAnime'>ғɪɴɪsʜᴇᴅ ᴀɴɪᴍᴇ</a>\n"
+    "• <a href='https://t.me/AnimeCrispNews'>ᴀɴɪᴍᴇ ɴᴇᴡs</a>\n"
     "──────────────────────\n"
     "<i>ᴀʟʟ ɪɴ ᴏɴᴇ ᴘʟᴀᴄᴇ.</i>"
 )
