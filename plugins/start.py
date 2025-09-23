@@ -30,6 +30,8 @@ BAN_SUPPORT = f"{BAN_SUPPORT}"
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def start_command(client: Client, message: Message):
+    await message.send_chat_action(message.chat.id, ChatAction.PLAYING) 
+    await asyncio.sleep(2)
     user_id = message.from_user.id
 
     # Add user if not already present
@@ -164,7 +166,8 @@ async def start_command(client: Client, message: Message):
 chat_data_cache = {}
 
 async def not_joined(client: Client, message: Message):
-    temp = await message.reply("<b><i>ᴡᴀɪᴛ ᴀ sᴇᴄ..</i></b>")
+    await message.send_chat_action(message.chat.id, ChatAction.PLAYING) 
+    await asyncio.sleep(2)
 
     user_id = message.from_user.id
     buttons = []
@@ -221,12 +224,14 @@ async def not_joined(client: Client, message: Message):
         try:
             buttons.append([
                 InlineKeyboardButton(
-                    text='♻️ Tʀʏ Aɢᴀɪɴ',
+                    text='Tʀʏ Aɢᴀɪɴ',
                     url=f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ])
         except IndexError:
             pass
+        await message.send_chat_action(message.chat.id, ChatAction.PLAYING) 
+        await asyncio.sleep(2)
         await message.reply_photo(
             photo=FORCE_PIC,
             caption=FORCE_MSG.format(
@@ -242,7 +247,7 @@ async def not_joined(client: Client, message: Message):
     except Exception as e:
         print(f"Final Error: {e}")
         await temp.edit(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @rohit_1888</i></b>\n"
+            f"<b><i>! ғᴀᴄɪɴɢ ᴘʀᴏʙʟᴇᴍ? ᴜsᴇ /report <message> ᴏʀ ᴅᴍ @OnlyNoco</i></b>\n"
             f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
         )
 
@@ -264,11 +269,11 @@ async def schedule_auto_delete(client, codeflix_msgs, notification_msg, file_aut
 
     try:
         keyboard = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ɢᴇᴛ ғɪʟᴇ ᴀɢᴀɪɴ!", url=reload_url)]]
+            [[InlineKeyboardButton("• ɢᴇᴛ ғɪʟᴇs •", url=reload_url)]]
         ) if reload_url else None
 
         await notification_msg.edit(
-            "<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",
+            "<blockquote><b>›› Pʀᴇᴠɪᴏᴜs Mᴇssᴀɢᴇ ᴡᴀs Dᴇʟᴇᴛᴇᴅ !!\n\nIғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇs ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ: • ɢᴇᴛ ғɪʟᴇs • ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴇʟsᴇ ᴄʟᴏsᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ.</b></blockquote>",
             reply_markup=keyboard
         )
     except Exception as e:
