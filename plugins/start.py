@@ -167,11 +167,14 @@ chat_data_cache = {}
 
 async def not_joined(client: Client, message: Message):
     await client.send_chat_action(message.chat.id, ChatAction.PLAYING) 
-    await asyncio.sleep(1)
+    await asyncio.sleep(0.7) 
 
     user_id = message.from_user.id
     buttons = []
     count = 0
+ 
+
+    temp = await message.reply("<b>!!!</b>", parse_mode=ParseMode.HTML)
 
     try:
         all_channels = await db.show_channels()  # Should return list of (chat_id, mode) tuples
@@ -216,7 +219,7 @@ async def not_joined(client: Client, message: Message):
                 except Exception as e:
                     print(f"Error with chat {chat_id}: {e}")
                     return await temp.edit(
-                        f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @rohit_1888</i></b>\n"
+                        f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @OnlyNoco</i></b>\n"
                         f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
                     )
 
